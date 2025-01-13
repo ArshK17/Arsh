@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog and Customer Review - Trevlo</title>
+    <style>
+    
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #b3e5fc, #0277bd);
+    color: #333;
+    text-align: center;
+}
+
+
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+        .logo {
+            height: 80px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(2, 5, 53);
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #fbe56b;
+            transform: translateY(-3px);
+        }
+
+        main {
+            margin-top: 150px;
+            padding: 20px;
+        }
+
+       .blog-section, .reviews-section {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog {
+            margin-bottom: 20px;
+        }
+
+        .star-rating {
+            text-align: center;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #340cf9;
+        }
+
+        .submit-review {
+            background-color: #1456a1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .submit-review:hover {
+            background-color: #0d4c91;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="Trev.png" alt="Trevlo Logo" style="height: 50px;">
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="About Us.html">About Us</a>
+        <a href="Destinations.html">Destinations</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contact Us.html">Contact Us</a>
+    </nav>
+</header>
+
+<div class="container">
+    
+    <div class="blog-section">
+        <h2>Travel Blogs</h2>
+        
+       
+        <div class="blog">
+            <h3>Unveiling Africa - A Journey Full of Adventure</h3>
+            <p>Explore the dynamic look of African Safaris and Animals. A journey full of culture and vibrant traditions.</p>
+        </div>
+
+       
+        <div class="blog">
+            <h3>The Best Beaches to Visit this upcoming 2025 summer!</h3>
+            <p>There are many top beaches that you can visit with your friends and family such as the Jumeirah Beach in Dubai, UAE!</p>
+        </div>
+
+       
+        <div class="blog">
+            <h3>Trying out the Tastiest Dishes Around the World!</h3>
+            <p>Traveling around to explore amazing cuisines? Check out the best cultural food in Turkey and Pakistan which is trending now!</p>
+        </div>
+    </div>
+
+    
+    <div class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <p>Rate your experience with Trevlo:</p>
+        <form id="reviewForm">
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">★</label>
+            </div>
+            <button type="submit" class="submit-review">Submit Review</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('reviewForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const rating = document.querySelector('input[name="rating"]:checked');
+        if (rating) {
+            alert(`Thank you for your ${rating.value}-star review with Trevlo!`);
+        } else {
+            alert('Please select a star rating before submitting');
+        }
+    });
+</script>
+
+</body>
+</html>
+<img src="Trev.png" alt="Trevlo Logo" style="height: 70px;">

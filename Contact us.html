@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Trevlo</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        text-align: center;
+        padding-top: 100px;
+        position: relative;
+        height: 100vh;
+        background: linear-gradient(to bottom, #55b3f1, #80d0ff);
+        overflow: hidden;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url('https://svgshare.com/i/uPy.svg') no-repeat;
+        background-size: cover;
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(207, 245, 255, 0.9);
+        color: white;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+        background-color: #e5f775;
+        transform: translateY(-3px);
+    }
+
+    main {
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    form {
+        display: inline-block;
+        text-align: left;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    form input, form textarea, form button {
+        display: block;
+        width: calc(100% - 20px);
+        margin: 10px 10px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    form button {
+        background-color: #1456a1;
+        color: white;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+    }
+
+    form button:hover {
+        background-color: #0d4c91;
+    }
+</style>
+</head>
+<body>
+<!-- Header Section -->
+<header>
+    <img src="Trev.png" alt="Trevlo Logo" class="logo">
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="About Us.html">About</a>
+        <a href="Destinations.html">Destinations</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Contact us.html">Contact Us</a>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+    <h1>Contact Us - Travel with Trevlo!</h1>
+    <form id="contactForm" onsubmit="submitContactForm(event)">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+<!-- Firebase SDK -->
+<script type="module">
+    // Import Firebase SDK
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+    // Firebase Configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAFS-ElGeHBCTVZQaSltnHzVhpus5DHkSQ",
+        authDomain: "trevlo-22e06.firebaseapp.com",
+        databaseURL: "https://trevlo-22e06-default-rtdb.firebaseio.com",
+        projectId: "trevlo-22e06",
+        storageBucket: "trevlo-22e06.firebasestorage.app",
+        messagingSenderId: "1033468381853",
+        appId: "1:1033468381853:web:b41050cecd4ad62d68e274",
+        measurementId: "G-WH197XV9VL"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    // Submit Form Data to Firebase
+    function submitContactForm(event) {
+        event.preventDefault(); // Prevent page reload
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        push(ref(database, "contacts"), {
+            name: name,
+            email: email,
+            message: message
+        })
+        .then(() => {
+            alert("Thank you for submitting your details!");
+            document.getElementById("contactForm").reset(); // Reset form fields
+        })
+        .catch((error) => {
+            alert("Error: " + error.message);
+        });
+    }
+
+
+  
+    
