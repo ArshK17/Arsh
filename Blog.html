@@ -142,39 +142,25 @@
     </div>
 
     
-    <div class="reviews-section">
-        <h2>Customer Reviews</h2>
-        <p>Rate your experience with Trevlo:</p>
-        <form id="reviewForm">
-            <div class="star-rating">
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5">★</label>
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4">★</label>
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3">★</label>
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2">★</label>
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1">★</label>
-            </div>
-            <button type="submit" class="submit-review">Submit Review</button>
+     <div class="reviews-section">
+        <h2>Trevlo customer review</h2>
+        <p>Hey there! How was your experience with Trevlo?</p>
+        <form id="multipleChoiceForm">
+            <select name="experience">
+                <option value="Amazing">Amazing</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Poor">Poor</option>
+            </select>
+            <button type="submit" class="submit-review">Submit</button>
         </form>
     </div>
-</div>
-
-<script>
-    document.getElementById('reviewForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const rating = document.querySelector('input[name="rating"]:checked');
-        if (rating) {
-            alert(`Thank you for your ${rating.value}-star review with Trevlo!`);
-        } else {
-            alert('Please select a star rating before submitting');
-        }
-    });
-</script>
-
-</body>
-</html>
-<img src="Trev.png" alt="Trevlo Logo" style="height: 70px;">
+    
+    <script>
+        document.getElementById('multipleChoiceForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const experience = document.querySelector('select[name="experience"]').value;
+            alert(`Huge Thanks for letting us know your experience was ${experience}! Make sure too keep exploring and we will continue to make you happy at trevlo!`);
+        });
+    </script>
+    <img src="Trev.png" alt="Trevlo Logo" style="height: 70px;">
