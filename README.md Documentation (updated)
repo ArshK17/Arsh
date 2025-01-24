@@ -1,0 +1,84 @@
+Uni Web Development Project- Trevlo 
+Documentation (Updated Analysis)
+
+Trevlo is a mainly travel and toursim guide website partnered with our trusted travel agencies which is created and designed to inspire and guide users on their journeys around the world with positivity. From the website visual appeal to a dynamic design and functional high features.
+Trevlo aims to create an engaging platform to showcase the best travel experience with multiple guides from exploring destinations to booking flights enhancing user experience.
+This README documentation elucidates the main features, designs with styles css, responsiveness and the vision behind trevlo used in the development of the Trevlo website.
+
+Vision and Background behind trevlo - 
+During the development of my website through code and scratch, my main goal was to create something unique and accessible for everyone around the world to explore and discover. The Terms ”Travel” and “Explore” came to my mind so I tend to redefine travel and explore and call it “Trevlo” where its Your Story and Our Destination. This demonstrates a concept where my website focuses at a variety range of destinations and travel blog stories for the person to discover and have an insight, as too them its their Story and a start to a new journey.
+At Trevlo, we provide their ideal destinations to create a wonderful experience and journey for them
+
+We offer International flight booking arrangements worldwide from Huge Skyscrapers to the Tropics with our reliable partner travel agencies
+
+Trevlo Webpages-
+
+Home - An Overview / Introduction to Trevlo and Top rated Destinations suggestions linked with the 'destination' page.
+
+About Us - All About Trevlo such as services we provide and A CEO portfolio section about myself Arsh khan.
+
+Destinations - All Destinations worldwide are displayed on that page as you can explore through its guide option and a flight booking button linked with a trusted travel agency including hotel bookings.
+
+Blog - Top rated travel blog stories to give the user an insight of tourism experience and a Customer Review Section with a dropdown menu for feedback!
+Contact US.
+
+Contact Us - Contact us for more information by entering your name, email and your query that is linked with our database. Trevlo values your inquiry.
+
+Partnered Travel Agencies - Trip.com and MakeMyTrip
+
+Features - 
+. Nav Bar hovering effect - Changes color from blue to yellow
+. Buttons that links to a specific page
+. Destination cards hover (links to the destination page)
+. CSS Dropdown menu for customer reviews - Amazing, Good, Average and Poor Options
+. When Submitting a Review, trevlo will drop a thank you message on the page
+. Explore Guide and Flight Booking Options for every destination 
+. Vibrant images for viusal appeal - valid primary color scheme
+. Firebase Integration
+
+Layout -
+Visual Consistency such as the nav bar on the top right corner with balanced Spacing between texts
+The background’s linear-gradient is to bottom right (#b3e5fc, #0277bd) and the text is aligned in the centre
+. The logo’s height is 80px
+. The Nav bar has a spaced gap of 20px and its positioned correctly on the top right corner
+. navbar color: #0277bd and the font-weight is bold
+. padding: 5px 10px
+.  transition: all 0.3s ease when it hovers
+.navbar hover color: #fbc02d;
+. background-color: rgba(255, 255, 255, 0.8)
+. border-radius: 5px
+ The destinations cards are around 20px padding and spacing. 
+. The card’s width is 100% and height is 150px but the size differs as on the destinations page
+ the sections are much bigger for a better and broader visual representation
+. The about us page, the photo of myself is in png file making the image look more clear to the user and its an oval shape with max-width of 150px, border radius of 50%
+. margin 20px 
+
+Color Scheme - 
+Primary colors:
+Light Blue, Dark Blue, White and Yellow - This creates a vibrant and aesthetic look on my website as it matches with the logo and theme
+Light Blue – Represents the skys and clouds 
+when travelling in air
+Yellow – Shares Warmth and Excitement among 
+All travelers
+White – Maintains Peace and Clarity
+Dark Blue – Creates a Depth engaging color to the website
+
+Responsiveness - Mainly Laptop / Desktop (best devices to view)
+other- Mobile and Tablet
+
+Technologies Used to create the website - Frontend and Backend and Fonts
+
+Frontend Coding languages -  HTML and Styles CSS code are used for my Trevlo website's structure, layout, content and visual appeal as well as its interactive elements
+
+Backend - The Firebase Integration embedded in the contact us page with its real time database to retrieve an collect data
+
+Fonts - Typography such as Arial 'Bold' for Heading and sub-headings as well as Calibri for body text
+
+
+Future Website Updates / Enhancements:
+
+1. Creating a user account center (Login in / Sign up) this allows the user to have its own account and track its own progress
+2. Updating more travel blog stories at a pace
+3. Creating an App for Trevlo to enhance a mobile-freindly platform
+4. Seperate section for transportation services such as booking a taxi nearby your location to the airport
+5. Live chat platform
